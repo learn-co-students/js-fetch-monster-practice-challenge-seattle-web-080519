@@ -136,10 +136,6 @@ function postAMonster(event) {
     })
   })
     .then(res => res.json())
-    .then(res => appendPost(res))
+    .then(res => add1Monster(res))
     .catch(err => console.log(err));
-}
-
-function appendPost(res) {
-  add1Monster(res);
 }
