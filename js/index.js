@@ -137,5 +137,12 @@ function postAMonster(event) {
   })
     .then(res => res.json())
     .then(res => add1Monster(res))
+    .then(clearForm())
     .catch(err => console.log(err));
+}
+
+function clearForm() {
+  document.getElementById("name-input").value = "";
+  document.getElementById("age-input").value = "";
+  document.getElementById("description-input").value = "";
 }
